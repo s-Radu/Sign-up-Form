@@ -21,20 +21,20 @@
     <title>Project: Sign-up Form</title>
 </head>
 
-<body>
+<body class="bg-gray-600 max-h-screen overflow-hidden">
 
-    <section class="page-1 " id="page-1">
+    <section class="slideIn" id="firstPage">
         <div class="grid grid-cols-3 mx-4 rounded-2xl max-h-screen">
 
             <div class=" rounded-l-2xl min-h-screen">
-                <div class="background-1 h-full rounded-l-2xl relative">
+                <div class="background-1 h-full rounded-2xl relative">
                     <span class=" w-full h-20 bg-gray-400 absolute left-2/4 top-2/4 -translate-x-2/4 opacity-30"></span>
                     <span class="logo h-20 w-16 z-10 absolute left-2/4 top-2/4 -translate-x-2/4 opacity-100"></span>
                 </div>
             </div>
             <div class=" rounded-r-2xl col-span-2 flex flex-col justify-evenly">
-                <div class="bg-gray-100 rounded-2xl">
-                    <h1 class="title font-montserat text-xl m-4 ">Super undisclosed hidden rave that will be held
+                <div class="bg-gray-100 m-4 rounded-2xl">
+                    <h1 class="title font-montserat text-xl m-6 ">Super undisclosed hidden rave that will be held
                         at a
                         random
                         location,
@@ -49,7 +49,8 @@
                 </div>
                 <form class="m-4 bg-gray-100 rounded-2xl">
                     <fieldset class="grid md:grid-cols-2 justify-center">
-                        <legend class="font-josefin text-3xl p-2 m-4 col-span-2 text-center md:text-left">Let's do this!
+                        <legend class="font-josefin text-3xl p-2 m-4 col-span-2 text-left md:text-left">
+                            Let's do this!
                         </legend>
                         <div class="flex flex-col items-start m-4">
                             <label for="fname" class="font-josefin m-2">First Name <span
@@ -98,11 +99,11 @@
                         </div>
                     </fieldset>
                 </form>
-                <div class="flex flex-col bg-gray-100 rounded-2xl items-start">
+                <div class="flex flex-col bg-gray-100 rounded-2xl items-start m-4">
                     <button
                         class="m-4 bg-gray-600 hover:bg-gray-950 text-white font-josefin p-2 rounded-2xl text-xl ">Rave
                         Account</button>
-                    <p class="m-4">Already have an account? <span id="page"
+                    <p class="m-4">Already have an account? <span id="logInPage"
                             class="hover:text-blue-700 hover:cursor-pointer">Log in</span>
                     </p>
                 </div>
@@ -110,8 +111,15 @@
         </div>
     </section>
 
-    <section class="page-2" id="page-2">
+    <section class="slideOut" id="secondPage">
 
+        <div class="flex flex-col bg-gray-100 rounded-2xl items-start m-4">
+            <button class="m-4 bg-gray-600 hover:bg-gray-950 text-white font-josefin p-2 rounded-2xl text-xl ">Rave
+                Account</button>
+            <p class="m-4">Don't have an account? <span id="signUpPage"
+                    class="hover:text-blue-700 hover:cursor-pointer">Sign-up</span>
+            </p>
+        </div>
     </section>
 
 </body>

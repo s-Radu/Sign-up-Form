@@ -17,3 +17,41 @@
 .required:hover::after {
   content: "required";
 }
+
+.slideOut {
+  animation: slideOut 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  z-index: -1;
+}
+.slideIn {
+  animation: slideIn 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  z-index: 1;
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+  90% {
+    transform: translateZ(-1100px);
+    opacity: 0;
+    scale: 0;
+  }
+  100% {
+    translate: -500%;
+    position: absolute;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateZ(-1400px);
+    opacity: 0;
+    scale: 0;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+    scale: 1;
+  }
+}
