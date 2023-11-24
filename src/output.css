@@ -647,6 +647,10 @@ video {
   top: 50%;
 }
 
+.top-1\/4 {
+  top: 25%;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -2459,6 +2463,12 @@ video {
   background-size: cover;
 }
 
+.background-2 {
+  background-image: url("/imgs/sign-in background.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
 .logo {
   background-image: url("/imgs/logo.png");
   background-position: center;
@@ -2602,11 +2612,6 @@ video {
 
 .hover\:focus\:text-center:focus:hover {
   text-align: center;
-}
-
-.focus-visible\:border-red-200:focus-visible {
-  --tw-border-opacity: 1;
-  border-color: rgb(254 202 202 / var(--tw-border-opacity));
 }
 
 @media (min-width: 640px) {
