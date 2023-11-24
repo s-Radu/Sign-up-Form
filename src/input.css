@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.background-1 {
+  background-image: url("/imgs/sign-up background.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.logo {
+  background-image: url("/imgs/logo.png");
+  background-position: center;
+  background-size: cover;
+  aspect-ratio: 16/9;
+}
+
+.required:hover::after {
+  content: "required";
+}
