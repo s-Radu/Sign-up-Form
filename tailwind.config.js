@@ -16,4 +16,5 @@ module.exports = {
   plugins: [],
 };
 
-// npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
+//> Command to run the watch over index.html so it updates the output.css
+//* npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
