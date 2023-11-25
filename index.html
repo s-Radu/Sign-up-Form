@@ -21,7 +21,7 @@
     <title>Project: Sign-up Form</title>
 </head>
 
-<body class="bg-gray-600 max-h-screen overflow-hidden">
+<body class="bg-gray-300 max-h-screen ">
 
     <section class="slideIn" id="firstPage">
         <div class="grid grid-cols-3 mx-4 rounded-2xl max-h-screen">
@@ -66,7 +66,7 @@
                                 class="indent-2 rounded-xl font-josefin text-lg p-2 focus:outline-none focus:ring focus:ring-violet-300"
                                 required>
                         </div>
-                        <div class="flex flex-col items-start m-4">gi
+                        <div class="flex flex-col items-start m-4">
                             <label for="email" class="font-josefin m-2">Email <span
                                     class="required text-red-600 hover:cursor-none">*</span></label>
                             <input type="mail" name="email" id="email" placeholder="Email "
@@ -104,15 +104,15 @@
                             <span class="matches font-raleway text-sm m-2 text-green-500 font-semibold">Matches</span>
                         </div>
                     </fieldset>
+                    <div class="flex flex-col bg-gray-100 rounded-2xl items-start m-4">
+                        <button type="submit"
+                            class="m-4 bg-gray-600 hover:bg-gray-950 text-white font-josefin p-2 rounded-2xl text-xl ">Rave
+                            Account</button>
+                        <p class="m-4">Already have an account? <span id="logInPage"
+                                class="hover:text-blue-700 hover:cursor-pointer">Log in</span>
+                        </p>
+                    </div>
                 </form>
-                <div class="flex flex-col bg-gray-100 rounded-2xl items-start m-4">
-                    <button type="submit"
-                        class="m-4 bg-gray-600 hover:bg-gray-950 text-white font-josefin p-2 rounded-2xl text-xl ">Rave
-                        Account</button>
-                    <p class="m-4">Already have an account? <span id="logInPage"
-                            class="hover:text-blue-700 hover:cursor-pointer">Log in</span>
-                    </p>
-                </div>
             </div>
         </div>
     </section>
@@ -122,7 +122,7 @@
 
             <div class=" rounded-l-2xl min-h-screen">
                 <div class="background-2 h-full rounded-2xl relative">
-                    <span class=" w-full h-20 bg-gray-400 absolute left-2/4 top-1/4 -translate-x-2/4 opacity-30"></span>
+                    <span class=" w-full h-20 bg-gray-200 absolute left-2/4 top-1/4 -translate-x-2/4 opacity-30"></span>
                     <span class="logo h-20 w-16 z-10 absolute left-2/4 top-1/4 -translate-x-2/4 opacity-100"></span>
                 </div>
             </div>
@@ -140,7 +140,6 @@
                         <legend class="font-josefin text-3xl p-2 m-4 col-span-2 text-left md:text-left">
                             So, wagwan bruv?
                         </legend>
-
                         <div class="flex flex-col items-start m-4">
                             <label for="logInEmail" class="font-josefin m-2">Email <span
                                     class="required text-red-600 hover:cursor-none">*</span></label>
@@ -148,7 +147,6 @@
                                 class="indent-2 rounded-xl font-josefin text-lg p-2 focus:outline-none focus:ring focus:ring-violet-300"
                                 required>
                         </div>
-
                         <div class="flex flex-col lg:flex-row items-start m-4">
                             <div class="wrapper flex flex-col">
                                 <label for="logInPassword" class="font-josefin m-2">Password <span
@@ -157,18 +155,17 @@
                                     class="indent-2 rounded-xl font-josefin text-lg p-2 focus:outline-none focus:ring focus:ring-violet-300"
                                     required>
                             </div>
-
                     </fieldset>
+                    <div class="flex flex-col bg-gray-100 rounded-2xl items-start m-4">
+                        <button type="submit"
+                            class="m-4 bg-gray-600 hover:bg-gray-950 text-white font-josefin p-2 rounded-2xl text-xl ">Rave
+                            Account</button>
+                        <p class="m-4">Don't have an account? <span id="signUpPage"
+                                class="hover:text-blue-700 hover:cursor-pointer">Sign-up</span>
+                        </p>
+                    </div>
                 </form>
 
-                <div class="flex flex-col bg-gray-100 rounded-2xl items-start m-4">
-                    <button type="submit"
-                        class="m-4 bg-gray-600 hover:bg-gray-950 text-white font-josefin p-2 rounded-2xl text-xl ">Rave
-                        Account</button>
-                    <p class="m-4">Don't have an account? <span id="signUpPage"
-                            class="hover:text-blue-700 hover:cursor-pointer">Sign-up</span>
-                    </p>
-                </div>
     </section>
 
 </body>

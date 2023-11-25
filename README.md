@@ -13,6 +13,15 @@ The form is just a simple sign-up form and I've added a sign in page that will t
 
 This project is not licenced and it's part of the Odin Project learning trail
 
+## Image credits
+
+- Background photos have been taken from Unsplash.
+  Special thanks to Tyler Quick
+  Special thanks to Kajetan Suilma
+
+- The fav icon was taken from icon archive.
+  Special thanks to Erix Subyarko
+
 ## Authors
 
 Radu ( lil void)
