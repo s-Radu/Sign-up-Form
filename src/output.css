@@ -6641,6 +6641,10 @@ input[type="range"]:active::-webkit-slider-thumb {
     margin-bottom: 0px;
   }
 
+  .md\:flex {
+    display: flex;
+  }
+
   .md\:max-w-\[720px\] {
     max-width: 720px;
   }
@@ -6651,6 +6655,10 @@ input[type="range"]:active::-webkit-slider-thumb {
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:flex-col {
+    flex-direction: column;
   }
 
   .md\:pr-1 {

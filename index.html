@@ -111,7 +111,7 @@
                                 id="pwdMatches">Matches</span>
                         </div>
                     </fieldset>
-                    <div class="flex  bg-gray-100 rounded-2xl items-start m-4 justify-between">
+                    <div class=" flex-row bg-gray-100 rounded-2xl items-start m-4 justify-between md:flex">
                         <div class="flex-flex-col">
                             <button type="submit"
                                 class="m-4 bg-gray-600 hover:bg-gray-950 text-white font-josefin p-2 rounded-2xl text-xl ">Rave
@@ -121,9 +121,9 @@
                             </p>
                         </div>
 
-                        <a class="font-josefin text-sm m-4 self-end  text-gray-500 hover:text-gray-700 hover:underline""
-                            data-te-offcanvas-toggle href=" #offcanvasExample" role="button"
-                            aria-controls="offcanvasExample" data-te-ripple-init data-te-ripple-color="light">
+                        <a class="font-josefin text-sm m-4 self-end justify-center text-right text-gray-500 hover:text-gray-700 hover:underline"
+                            id="offCanvasButton" data-te-offcanvas-toggle href=" #offCanvas" role="button"
+                            aria-controls="offCanvas" data-te-ripple-init data-te-ripple-color="light">
                             Read our terms and conditions!
                         </a>
                     </div>
@@ -133,15 +133,15 @@
         <div class="flex space-x-2">
             <div>
                 <div class="invisible fixed bottom-0 left-0 top-0 z-[1045] flex w-96 max-w-full min-h-screen -translate-x-full flex-col border-none bg-white bg-clip-padding text-neutral-700 shadow-sm outline-none transition duration-300 ease-in-out dark:bg-neutral-800 dark:text-neutral-200 [&[data-te-offcanvas-show]]:transform-none"
-                    tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" data-te-offcanvas-init>
+                    tabindex="-1" id="offCanvas" aria-labelledby="offCanvasLabel" data-te-offcanvas-init>
                     <div class="flex items-center justify-between p-4">
-                        <h5 class="mb-0 font-semibold leading-normal font-montserat text-2xl"
-                            id="offcanvasExampleLabel">
+                        <h5 class="mb-0 font-semibold leading-normal font-montserat text-2xl text-ce"
+                            id="offCanvasLabel">
                             Terms and conditions
                         </h5>
                         <button type="button"
                             class="box-content rounded-none border-none opacity-50 hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
-                            data-te-offcanvas-dismiss>
+                            id="scrollToBottom" data-te-offcanvas-dismiss>
                             <span
                                 class="w-[1em] focus:opacity-100 disabled:pointer-events-none disabled:select-none disabled:opacity-25 [&.disabled]:pointer-events-none [&.disabled]:select-none [&.disabled]:opacity-25">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"

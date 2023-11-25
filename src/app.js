@@ -1,3 +1,22 @@
+//* Off canvas scroll to the top when clicked
+
+const offCanvas = document.getElementById("offCanvasButton");
+
+offCanvas.addEventListener("click", scrollToTop);
+
+function scrollToTop() {
+  window.scrollTo(0, 0);
+}
+//* Off canvas scroll to bottom when clicked
+
+const offCanvasBottom = document.getElementById("scrollToBottom");
+
+offCanvasBottom.addEventListener("click", scrollToBottom);
+
+function scrollToBottom() {
+  window.scrollTo(0, document.body.scrollHeight);
+}
+
 //* Page change
 
 const logInPage = document.getElementById("logInPage");
