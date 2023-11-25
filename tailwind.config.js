@@ -1,7 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  content: ["./**/*.{html,js}", "./src/**/*.{html,js}"],
+  content: [
+    "./**/*.{html,js}",
+    "./src/**/*.{html,js}",
+    "./node_modules/tw-elements/dist/js/**/*.js",
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -13,7 +17,8 @@ module.exports = {
     },
   },
   purge: ["./**/*.{html,js}", "./src/**/*.{html,js}"], // Add the purge option
-  plugins: [],
+  plugins: [require("tw-elements/dist/plugin.cjs")],
+  darkMode: "class",
 };
 
 //> Command to run the watch over index.html so it updates the output.css

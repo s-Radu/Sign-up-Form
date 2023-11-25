@@ -18,4 +18,14 @@ function changePage() {
   }
 }
 
-//* Password check
+//* Form checks
+
+//> First and last name checks
+const firstName = document.getElementById("fname");
+const lastName = document.getElementById("lname");
+
+firstName.addEventListener("blur", checkName);
+
+function checkName() {
+  console.log(firstName.value);
+}

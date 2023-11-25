@@ -18,6 +18,10 @@
     <script src="src/app.js" defer></script>
     <!-- TailwindCSS and normal css file -->
     <link rel="stylesheet" href="/src/output.css">
+
+    <!-- Tailwind css elements -->
+    <script type="text/javascript" src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js" defer></script>
+
     <title>Project: Sign-up Form</title>
 </head>
 
@@ -60,9 +64,9 @@
                                 required minlength="2">
                         </div>
                         <div class="flex flex-col items-start m-4">
-                            <label for="sname" class="font-josefin m-2">Last Name <span
+                            <label for="lname" class="font-josefin m-2">Last Name <span
                                     class="required text-red-600 hover:cursor-none">*</span></label>
-                            <input type="text" name="sname" id="sname" placeholder="Last Name "
+                            <input type="text" name="lname" id="lname" placeholder="Last Name "
                                 class="indent-2 rounded-xl font-josefin text-lg p-2 focus:outline-none focus:ring focus:ring-violet-300 invalid:ring-red-500 focus:invalid:ring-red-500"
                                 required minlength="2">
                         </div>
@@ -71,23 +75,23 @@
                                     class="required text-red-600 hover:cursor-none">*</span></label>
                             <input type="mail" name="email" id="email" placeholder="Email "
                                 class="indent-2 rounded-xl font-josefin text-lg p-2 focus:outline-none focus:ring focus:ring-violet-300 invalid:ring-red-500 focus:invalid:ring-red-500"
-                                required>
-                            <span class="emailError ml-4 text-red-500" id="emailError">error message</span>
+                                required minlength="4">
+                            <span class="emailError ml-4 text-red-500" id="emailError"></span>
                         </div>
                         <div class="flex flex-col items-start m-4">
                             <label for="phoneNumber" class="font-josefin m-2">Phone number <span
                                     class="required text-red-600 hover:cursor-none">*</span></label>
                             <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Phone number "
-                                class="indent-2 rounded-xl font-josefin text-lg p-2 Password focus:outline-none focus:ring focus:ring-violet-300 invalid:ring-red-500 focus:invalid:ring-red-500"
+                                class="indent-2 rounded-xl font-josefin text-lg p-2  focus:outline-none focus:ring focus:ring-violet-300 invalid:ring-red-500 focus:invalid:ring-red-500"
                                 required>
-                            <span class="phoneError ml-4 text-red-500" id="phoneError">error message</span>
+                            <span class="phoneError ml-4 text-red-500" id="phoneError"></span>
                         </div>
                         <div class="flex flex-col lg:flex-row items-start m-4">
                             <div class="wrapper flex flex-col">
                                 <label for="password" class="font-josefin m-2">Password <span
                                         class="required text-red-600 hover:cursor-none">*</span></label>
                                 <input type="password" name="password" id="password" placeholder=""
-                                    class="indent-2 rounded-xl font-josefin text-lg p-2 Password focus:outline-none focus:ring focus:ring-violet-300 invalid:ring-red-500 focus:invalid:ring-red-500"
+                                    class="indent-2 rounded-xl font-josefin text-lg p-2  focus:outline-none focus:ring focus:ring-violet-300 invalid:ring-red-500 focus:invalid:ring-red-500"
                                     required>
                             </div>
                             <ul class="m-2 mt-6 font-raleway text-sm" id="passwordReq">
@@ -114,6 +118,8 @@
                         <p class="m-4">Already have an account? <span id="logInPage"
                                 class="hover:text-blue-700 hover:cursor-pointer">Log in</span>
                         </p>
+
+                        <!--TODO ADD TERMS AND CONDITIONS -->
                     </div>
                 </form>
             </div>
@@ -148,7 +154,7 @@
                                     class="required text-red-600 hover:cursor-none">*</span></label>
                             <input type="mail" name="logInEmail" id="logInEmail" placeholder="Email"
                                 class="indent-2 rounded-xl font-josefin text-lg p-2 focus:outline-none focus:ring focus:ring-violet-300 invalid:ring-red-500 focus:invalid:ring-red-500"
-                                required>
+                                required minlength="4">
                         </div>
                         <div class="flex flex-col lg:flex-row items-start m-4">
                             <div class="wrapper flex flex-col">
