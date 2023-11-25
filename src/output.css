@@ -773,6 +773,10 @@ input[type="range"]:active::-webkit-slider-thumb {
   position: absolute;
 }
 
+.\!relative {
+  position: relative !important;
+}
+
 .relative {
   position: relative;
 }
@@ -1085,6 +1089,10 @@ input[type="range"]:active::-webkit-slider-thumb {
   margin: 1rem;
 }
 
+.m-48 {
+  margin: 12rem;
+}
+
 .m-6 {
   margin: 1.5rem;
 }
@@ -1309,6 +1317,10 @@ input[type="range"]:active::-webkit-slider-thumb {
   display: inline-flex;
 }
 
+.\!table {
+  display: table !important;
+}
+
 .table {
   display: table;
 }
@@ -1365,6 +1377,10 @@ input[type="range"]:active::-webkit-slider-thumb {
   display: inline-grid;
 }
 
+.\!contents {
+  display: contents !important;
+}
+
 .contents {
   display: contents;
 }
@@ -1403,6 +1419,10 @@ input[type="range"]:active::-webkit-slider-thumb {
 
 .h-14 {
   height: 3.5rem;
+}
+
+.h-2 {
+  height: 0.5rem;
 }
 
 .h-2\/5 {
