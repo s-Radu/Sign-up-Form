@@ -28,6 +28,7 @@ signUpPage.addEventListener("click", changePage);
 function changePage() {
   const firstPage = document.getElementById("firstPage");
   const secondPage = document.getElementById("secondPage");
+  const allInputs = document.querySelectorAll("input");
   if (firstPage.classList.contains("slideIn")) {
     firstPage.className = "slideOut";
     secondPage.className = "slideIn";
@@ -35,6 +36,9 @@ function changePage() {
     firstPage.className = "slideIn";
     secondPage.className = "slideOut";
   }
+  allInputs.forEach((input) => {
+    input.value = "";
+  });
 }
 
 //* Form checks
@@ -85,6 +89,7 @@ function checkName() {
 
 //> Email check
 const email = document.getElementById("email");
+const emailError = document.getElementById("emailError");
 
 email.addEventListener("keyup", function () {
   let timeoutId;
