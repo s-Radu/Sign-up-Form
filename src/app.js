@@ -140,7 +140,7 @@ function checkPhoneNumber() {
   }
 }
 
-//> Password checks
+//> Password check
 
 const password = document.getElementById("password");
 const passwordConfirm = document.getElementById("passwordConfirm");
@@ -160,6 +160,67 @@ function checkPassword() {
   if (password.value !== passwordConfirm.value) {
     passwordConfirmError.textContent = "Passwords do not match";
   } else {
-    passwordConfirmError.textContent = "";
+    passwordConfirmError.textContent = "Matches :) ";
   }
+}
+
+//> Password strength check
+
+const passwordStrenghtCheck = document.getElementById("passwordStrenghtCheck");
+
+password.addEventListener("keyup", function () {
+  let timeoutId;
+  clearTimeout(timeoutId);
+  const self = this;
+
+  timeoutId = setTimeout(() => {
+    checkPasswordStrenght.call(self);
+  }, 1000);
+});
+password.addEventListener("blur", () => {
+  passwordStrenghtCheck.classList.add("hidden");
+});
+
+function checkPasswordStrenght() {
+  const pwdCapital = document.getElementById("pwdCapital");
+  const pwdLength = document.getElementById("pwdLength");
+  const pwdNumber = document.getElementById("pwdNumber");
+  const pwdSpecial = document.getElementById("pwdSpecial");
+
+  passwordStrenghtCheck.classList.remove("hidden");
+
+  if (password.value.length > 8) {
+    pwdLength.classList.add("text-green-500");
+    pwdLength.classList.remove("text-red-500");
+  } else {
+    restorePasswordChecks();
+  }
+  if (/[A-Z]/.test(password.value)) {
+    pwdCapital.classList.remove("text-red-500");
+    pwdCapital.classList.add("text-green-500");
+  }
+  if (/[0-9]/.test(password.value)) {
+    pwdNumber.classList.remove("text-red-500");
+    pwdNumber.classList.add("text-green-500");
+  }
+  if (/[!@#$%^&*]/.test(password.value)) {
+    pwdSpecial.classList.remove("text-red-500");
+    pwdSpecial.classList.add("text-green-500");
+  }
+}
+
+function restorePasswordChecks() {
+  const pwdCapital = document.getElementById("pwdCapital");
+  const pwdLength = document.getElementById("pwdLength");
+  const pwdNumber = document.getElementById("pwdNumber");
+  const pwdSpecial = document.getElementById("pwdSpecial");
+
+  pwdCapital.classList.remove("text-green-500");
+  pwdCapital.classList.add("text-red-500");
+  pwdLength.classList.remove("text-green-500");
+  pwdLength.classList.add("text-red-500");
+  pwdNumber.classList.remove("text-green-500");
+  pwdNumber.classList.add("text-red-500");
+  pwdSpecial.classList.remove("text-green-500");
+  pwdSpecial.classList.add("text-red-500");
 }
