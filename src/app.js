@@ -44,7 +44,19 @@ const firstName = document.getElementById("fname");
 const lastName = document.getElementById("lname");
 
 firstName.addEventListener("blur", checkName);
+lastName.addEventListener("blur", checkName);
 
 function checkName() {
-  console.log(firstName.value);
+  const fName = document.getElementById("fnameError");
+  const lName = document.getElementById("lnameError");
+  if (this.value.length < 4) {
+    if (this.id === "fname") {
+      fName.textContent = `First name must be at least 4 characters long, you entered ${this.value.length}`;
+    } else if (this.id === "lname") {
+      lName.textContent = `Last name must be at least 4 characters long, you entered ${this.value.length}`;
+    } else {
+      fName.textContent = "";
+      lName.textContent = "";
+    }
+  }
 }
