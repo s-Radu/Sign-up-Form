@@ -44,9 +44,8 @@ function changePage() {
 const firstName = document.getElementById("fname");
 const lastName = document.getElementById("lname");
 
-let timeoutId;
-
 firstName.addEventListener("keyup", function () {
+  let timeoutId;
   clearTimeout(timeoutId);
   const self = this;
 
@@ -56,6 +55,7 @@ firstName.addEventListener("keyup", function () {
 });
 
 lastName.addEventListener("keyup", function () {
+  let timeoutId;
   clearTimeout(timeoutId);
   const self = this;
 
@@ -87,6 +87,7 @@ function checkName() {
 const email = document.getElementById("email");
 
 email.addEventListener("keyup", function () {
+  let timeoutId;
   clearTimeout(timeoutId);
   const self = this;
 
@@ -112,6 +113,7 @@ function checkEmail() {
 const phoneNumber = document.getElementById("phoneNumber");
 
 phoneNumber.addEventListener("keyup", function () {
+  let timeoutId;
   clearTimeout(timeoutId);
   const self = this;
 
@@ -135,5 +137,29 @@ function checkPhoneNumber() {
     phoneNumberError.textContent = "Invalid phone number format";
   } else {
     phoneNumberError.textContent = "";
+  }
+}
+
+//> Password checks
+
+const password = document.getElementById("password");
+const passwordConfirm = document.getElementById("passwordConfirm");
+const passwordConfirmError = document.getElementById("passwordConfirmError");
+
+passwordConfirm.addEventListener("keyup", function () {
+  let timeoutId;
+  clearTimeout(timeoutId);
+  const self = this;
+
+  timeoutId = setTimeout(() => {
+    checkPassword.call(self);
+  }, 1000);
+});
+
+function checkPassword() {
+  if (password.value !== passwordConfirm.value) {
+    passwordConfirmError.textContent = "Passwords do not match";
+  } else {
+    passwordConfirmError.textContent = "";
   }
 }

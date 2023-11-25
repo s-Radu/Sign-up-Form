@@ -92,21 +92,20 @@
                                     class="indent-2 rounded-xl font-josefin text-lg p-2  focus:outline-none focus:ring focus:ring-violet-300 invalid:ring-red-500 focus:invalid:ring-red-500"
                                     required>
                             </div>
-                            <ul class="m-2 mt-6 font-raleway text-sm" id="passwordReq">
-                                <li class="text-red-500 hidden" id="pwdCapital">Capital letter</li>
-                                <li class="text-red-500 hidden" id="pwdLength">Passowrd length</li>
-                                <li class="text-red-500 hidden" id="pwdNumber">Number character</li>
-                                <li class="text-red-500 hidden" id="pwdSpecial">Special character</li>
+                            <ul class="m-2 mt-6 font-raleway text-sm hidden" id="passwordReq">
+                                <li class="text-red-500 " id="pwdCapital">Capital letter</li>
+                                <li class="text-red-500 " id="pwdLength">Passowrd length</li>
+                                <li class="text-red-500 " id="pwdNumber">Number character</li>
+                                <li class="text-red-500 " id="pwdSpecial">Special character</li>
                             </ul>
                         </div>
                         <div class="flex flex-col items-start m-4">
-                            <label for="passwordCheck" class="font-josefin m-2">Password <span
+                            <label for="passwordConfirm" class="font-josefin m-2">Password <span
                                     class="required text-red-600 hover:cursor-none">*</span></label>
-                            <input type="password" name="passwordCheck" id="passwordCheck" placeholder="Password"
+                            <input type="password" name="passwordConfirm" id="passwordConfirm" placeholder="Password"
                                 class="indent-2 rounded-xl font-josefin text-lg p-2 focus:outline-none focus:ring focus:ring-violet-300 invalid:ring-red-500 focus:invalid:ring-red-500"
                                 required>
-                            <span class="matches font-raleway text-sm m-2 text-red-500 font-semibold hidden"
-                                id="pwdMatches">Matches</span>
+                            <span class="text-red-500 font-josefin ml-2 mt-2 text-sm" id="passwordConfirmError"></span>
                         </div>
                     </fieldset>
                     <div class=" flex-row bg-gray-100 rounded-2xl items-start m-4 justify-between md:flex">
