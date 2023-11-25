@@ -82,3 +82,27 @@ function checkName() {
     }
   }
 }
+
+//> Email check
+const email = document.getElementById("email");
+
+email.addEventListener("keyup", function () {
+  clearTimeout(timeoutId);
+  const self = this;
+
+  timeoutId = setTimeout(() => {
+    checkEmail.call(self);
+  }, 1000);
+});
+
+function checkEmail() {
+  const emailError = document.getElementById("emailError");
+
+  if (this.value.length < 4) {
+    emailError.textContent = `Email must be at least 4 characters long, you entered ${this.value.length}`;
+  } else if (!/\S+@\S+\.\S+/.test(this.value)) {
+    emailError.textContent = "Invalid email format";
+  } else {
+    emailError.textContent = "";
+  }
+}
