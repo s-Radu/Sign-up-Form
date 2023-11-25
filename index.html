@@ -56,52 +56,55 @@
                             <label for="fname" class="font-josefin m-2">First Name <span
                                     class="required text-red-600 hover:cursor-none">*</span></label>
                             <input type="text" name="name" id="fname" placeholder="First Name "
-                                class="indent-2 rounded-xl font-josefin text-lg p-2 focus:outline-none focus:ring focus:ring-violet-300"
-                                required>
+                                class="indent-2 rounded-xl font-josefin text-lg p-2 focus:outline-none focus:ring focus:ring-violet-300 invalid:ring-red-500 focus:invalid:ring-red-500"
+                                required minlength="2">
                         </div>
                         <div class="flex flex-col items-start m-4">
                             <label for="sname" class="font-josefin m-2">Last Name <span
                                     class="required text-red-600 hover:cursor-none">*</span></label>
                             <input type="text" name="sname" id="sname" placeholder="Last Name "
-                                class="indent-2 rounded-xl font-josefin text-lg p-2 focus:outline-none focus:ring focus:ring-violet-300"
-                                required>
+                                class="indent-2 rounded-xl font-josefin text-lg p-2 focus:outline-none focus:ring focus:ring-violet-300 invalid:ring-red-500 focus:invalid:ring-red-500"
+                                required minlength="2">
                         </div>
                         <div class="flex flex-col items-start m-4">
                             <label for="email" class="font-josefin m-2">Email <span
                                     class="required text-red-600 hover:cursor-none">*</span></label>
                             <input type="mail" name="email" id="email" placeholder="Email "
-                                class="indent-2 rounded-xl font-josefin text-lg p-2 focus:outline-none focus:ring focus:ring-violet-300"
+                                class="indent-2 rounded-xl font-josefin text-lg p-2 focus:outline-none focus:ring focus:ring-violet-300 invalid:ring-red-500 focus:invalid:ring-red-500"
                                 required>
+                            <span class="emailError ml-4 text-red-500" id="emailError">error message</span>
                         </div>
                         <div class="flex flex-col items-start m-4">
                             <label for="phoneNumber" class="font-josefin m-2">Phone number <span
                                     class="required text-red-600 hover:cursor-none">*</span></label>
                             <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Phone number "
-                                class="indent-2 rounded-xl font-josefin text-lg p-2 Password focus:outline-none focus:ring focus:ring-violet-300"
+                                class="indent-2 rounded-xl font-josefin text-lg p-2 Password focus:outline-none focus:ring focus:ring-violet-300 invalid:ring-red-500 focus:invalid:ring-red-500"
                                 required>
+                            <span class="phoneError ml-4 text-red-500" id="phoneError">error message</span>
                         </div>
                         <div class="flex flex-col lg:flex-row items-start m-4">
                             <div class="wrapper flex flex-col">
                                 <label for="password" class="font-josefin m-2">Password <span
                                         class="required text-red-600 hover:cursor-none">*</span></label>
                                 <input type="password" name="password" id="password" placeholder=""
-                                    class="indent-2 rounded-xl font-josefin text-lg p-2 Password focus:outline-none focus:ring focus:ring-violet-300"
+                                    class="indent-2 rounded-xl font-josefin text-lg p-2 Password focus:outline-none focus:ring focus:ring-violet-300 invalid:ring-red-500 focus:invalid:ring-red-500"
                                     required>
                             </div>
                             <ul class="m-2 mt-6 font-raleway text-sm" id="passwordReq">
-                                <li class="text-red-600">Capital Letter</li>
-                                <li class="text-red-600">Length</li>
-                                <li class="text-red-600">Number</li>
-                                <li class="text-red-600">Special character</li>
+                                <li class="text-red-500 hidden" id="pwdCapital">Capital letter</li>
+                                <li class="text-red-500 hidden" id="pwdLength">Passowrd length</li>
+                                <li class="text-red-500 hidden" id="pwdNumber">Number character</li>
+                                <li class="text-red-500 hidden" id="pwdSpecial">Special character</li>
                             </ul>
                         </div>
                         <div class="flex flex-col items-start m-4">
                             <label for="passwordCheck" class="font-josefin m-2">Password <span
                                     class="required text-red-600 hover:cursor-none">*</span></label>
                             <input type="password" name="passwordCheck" id="passwordCheck" placeholder="Password"
-                                class="indent-2 rounded-xl font-josefin text-lg p-2 focus:outline-none focus:ring focus:ring-violet-300"
+                                class="indent-2 rounded-xl font-josefin text-lg p-2 focus:outline-none focus:ring focus:ring-violet-300 invalid:ring-red-500 focus:invalid:ring-red-500"
                                 required>
-                            <span class="matches font-raleway text-sm m-2 text-green-500 font-semibold">Matches</span>
+                            <span class="matches font-raleway text-sm m-2 text-red-500 font-semibold hidden"
+                                id="pwdMatches">Matches</span>
                         </div>
                     </fieldset>
                     <div class="flex flex-col bg-gray-100 rounded-2xl items-start m-4">
@@ -144,7 +147,7 @@
                             <label for="logInEmail" class="font-josefin m-2">Email <span
                                     class="required text-red-600 hover:cursor-none">*</span></label>
                             <input type="mail" name="logInEmail" id="logInEmail" placeholder="Email"
-                                class="indent-2 rounded-xl font-josefin text-lg p-2 focus:outline-none focus:ring focus:ring-violet-300"
+                                class="indent-2 rounded-xl font-josefin text-lg p-2 focus:outline-none focus:ring focus:ring-violet-300 invalid:ring-red-500 focus:invalid:ring-red-500"
                                 required>
                         </div>
                         <div class="flex flex-col lg:flex-row items-start m-4">
@@ -152,7 +155,7 @@
                                 <label for="logInPassword" class="font-josefin m-2">Password <span
                                         class="required text-red-600 hover:cursor-none">*</span></label>
                                 <input type="password" name="logInPassword" id="logInPassword" placeholder="Password"
-                                    class="indent-2 rounded-xl font-josefin text-lg p-2 focus:outline-none focus:ring focus:ring-violet-300"
+                                    class="indent-2 rounded-xl font-josefin text-lg p-2 focus:outline-none focus:ring focus:ring-violet-300 invalid:ring-red-500 focus:invalid:ring-red-500"
                                     required>
                             </div>
                     </fieldset>

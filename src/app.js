@@ -1,3 +1,5 @@
+//* Page change
+
 const logInPage = document.getElementById("logInPage");
 const signUpPage = document.getElementById("signUpPage");
 
@@ -15,3 +17,5 @@ function changePage() {
     secondPage.className = "slideOut";
   }
 }
+
+//* Password check
