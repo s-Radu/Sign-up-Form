@@ -106,3 +106,34 @@ function checkEmail() {
     emailError.textContent = "";
   }
 }
+
+//> Phone number check
+
+const phoneNumber = document.getElementById("phoneNumber");
+
+phoneNumber.addEventListener("keyup", function () {
+  clearTimeout(timeoutId);
+  const self = this;
+
+  timeoutId = setTimeout(() => {
+    checkPhoneNumber.call(self);
+  }, 1000);
+});
+
+function checkPhoneNumber() {
+  const phoneNumberError = document.getElementById("phoneError");
+
+  if (this.value.length < 10) {
+    phoneNumberError.textContent = `Phone number must be at least 10 characters long, you entered ${this.value.length}`;
+  } else if (!/^\d+$/.test(this.value)) {
+    phoneNumberError.textContent = "Phone number can only contain numbers";
+  } else if (
+    /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(
+      this.value
+    )
+  ) {
+    phoneNumberError.textContent = "Invalid phone number format";
+  } else {
+    phoneNumberError.textContent = "";
+  }
+}
