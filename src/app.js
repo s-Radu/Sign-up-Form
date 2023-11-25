@@ -40,22 +40,44 @@ function changePage() {
 //* Form checks
 
 //> First and last name checks
+
 const firstName = document.getElementById("fname");
 const lastName = document.getElementById("lname");
 
-firstName.addEventListener("blur", checkName);
-lastName.addEventListener("blur", checkName);
+let timeoutId;
+
+firstName.addEventListener("keyup", function () {
+  clearTimeout(timeoutId);
+  const self = this;
+
+  timeoutId = setTimeout(() => {
+    checkName.call(self);
+  }, 1000);
+});
+
+lastName.addEventListener("keyup", function () {
+  clearTimeout(timeoutId);
+  const self = this;
+
+  timeoutId = setTimeout(() => {
+    checkName.call(self);
+  }, 1000);
+});
 
 function checkName() {
   const fName = document.getElementById("fnameError");
   const lName = document.getElementById("lnameError");
+
   if (this.value.length < 4) {
     if (this.id === "fname") {
       fName.textContent = `First name must be at least 4 characters long, you entered ${this.value.length}`;
     } else if (this.id === "lname") {
       lName.textContent = `Last name must be at least 4 characters long, you entered ${this.value.length}`;
-    } else {
+    }
+  } else {
+    if (this.id === "fname") {
       fName.textContent = "";
+    } else if (this.id === "lname") {
       lName.textContent = "";
     }
   }
