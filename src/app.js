@@ -89,6 +89,7 @@ function checkName() {
 
 //> Email check
 const email = document.getElementById("email");
+const logInEmail = document.getElementById("logInEmail");
 const emailError = document.getElementById("emailError");
 
 email.addEventListener("keyup", function () {
@@ -101,15 +102,46 @@ email.addEventListener("keyup", function () {
   }, 1000);
 });
 
+logInEmail.addEventListener("keyup", function () {
+  let timeoutId;
+  clearTimeout(timeoutId);
+  const self = this;
+
+  timeoutId = setTimeout(() => {
+    checkEmail.call(self);
+  }, 1000);
+});
+
 function checkEmail() {
   const emailError = document.getElementById("emailError");
+  const logInEmailError = document.getElementById("logInEmailError");
 
-  if (this.value.length < 4) {
-    emailError.textContent = `Email must be at least 4 characters long, you entered ${this.value.length}`;
-  } else if (!/\S+@\S+\.\S+/.test(this.value)) {
-    emailError.textContent = "Invalid email format";
+  if (email.value.length > 1) {
+    if (this.value.length < 4) {
+      emailError.textContent = `Email must be at least 4 characters long, you entered ${this.value.length}`;
+    } else if (!/\S+@\S+\.\S+/.test(this.value)) {
+      emailError.textContent = "Invalid email format";
+    } else {
+      emailError.textContent = "";
+    }
   } else {
     emailError.textContent = "";
+  }
+
+  if (logInEmail.value.length > 1) {
+    if (this.value.length < 4) {
+      logInEmailError.textContent = `Email must be at least 4 characters long, you entered ${this.value.length}`;
+    } else if (!/\S+@\S+\.\S+/.test(this.value)) {
+      logInEmailError.textContent = "Invalid email format";
+    } else {
+      logInEmailError.textContent = "Wagwan bruv, I know you :) ";
+      logInEmailError.classList.remove("text-red-500");
+      logInEmailError.classList.add("text-purple-500");
+      logInEmailError.classList.remove("text-sm");
+      logInEmailError.classList.add("text-md");
+    }
+  } else {
+    logInEmailError.textContent = "";
   }
 }
 
