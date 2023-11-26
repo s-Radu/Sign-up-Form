@@ -194,6 +194,8 @@ function checkPassword() {
   if (password.value !== passwordConfirm.value) {
     passwordConfirmError.textContent = "Passwords do not match";
   } else {
+    passwordConfirmError.classList.remove("text-red-500");
+    passwordConfirmError.classList.add("text-green-500");
     passwordConfirmError.textContent = "Matches :) ";
   }
 }
