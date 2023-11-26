@@ -2,9 +2,10 @@
 
 module.exports = {
   content: [
-    "./**/*.{html,js}",
-    "./src/**/*.{html,js}",
+    "./index.html",
+    "./src/app.js",
     "./node_modules/tw-elements/dist/js/**/*.js",
+    "./node_modules/flowbite/**/*.js",
   ],
   theme: {
     extend: {
@@ -17,7 +18,7 @@ module.exports = {
     },
   },
   purge: ["./**/*.{html,js}", "./src/**/*.{html,js}"], // Add the purge option
-  plugins: [require("tw-elements/dist/plugin.cjs")],
+  plugins: [require("flowbite/plugin")],
   darkMode: "class",
 };
 

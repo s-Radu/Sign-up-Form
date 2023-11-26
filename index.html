@@ -16,7 +16,7 @@
 
     <!-- Script -->
     <script src="src/app.js" defer></script>
-    <script type="text/javascript" src="/node_modules/tw-elements/dist/js/tw-elements.umd.min.js" defer></script>
+    <script src="/node_modules/flowbite/dist/flowbite.min.js" defer></script>
     <!-- TailwindCSS and normal css file -->
     <link rel="stylesheet" href="/src/output.css">
     <title>Project: Sign-up Form</title>
@@ -119,133 +119,140 @@
                             </p>
                         </div>
 
-                        <a class="font-josefin text-sm m-4 self-end justify-center text-right text-gray-500 hover:text-gray-700 hover:underline"
-                            id="offCanvasButton" data-te-offcanvas-toggle href=" #offCanvas" role="button"
-                            aria-controls="offCanvas" data-te-ripple-init data-te-ripple-color="light">
-                            Read our terms and conditions!
-                        </a>
+
+                        <!-- drawer init and toggle -->
+                        <div class="text-center self-end">
+                            <button
+                                class="text-black hover:text-blue-500 text-sm m-4 font-josefin text-left md:text-right flex "
+                                id="offCanvasButton" type="button" data-drawer-target="drawer-example"
+                                data-drawer-show="drawer-example" aria-controls="drawer-example">
+                                <svg class="w-4 h-4 me-2.5" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+                                </svg>
+                                Read T&C
+                            </button>
+                        </div>
                     </div>
                 </form>
             </div>
         </div>
-        <div class="flex space-x-2">
-            <div class="invisible fixed bottom-0 left-0 top-0 z-[1045] flex w-96 max-w-full min-h-screen -translate-x-full flex-col border-none bg-white bg-clip-padding text-neutral-700 shadow-sm outline-none transition duration-300 ease-in-out dark:bg-neutral-800 dark:text-neutral-200 [&[data-te-offcanvas-show]]:transform-none"
-                tabindex="-1" id="offCanvas" aria-labelledby="offCanvasLabel" data-te-offcanvas-init>
-                <div class="flex items-center justify-between p-4">
-                    <h5 class="mb-0 font-semibold leading-normal font-montserat text-2xl text-ce" id="offCanvasLabel">
-                        Terms and conditions
-                    </h5>
-                    <button type="button"
-                        class="box-content rounded-none border-none opacity-50 hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
-                        id="scrollToBottom" data-te-offcanvas-dismiss>
-                        <span
-                            class="w-[1em] focus:opacity-100 disabled:pointer-events-none disabled:select-none disabled:opacity-25 [&.disabled]:pointer-events-none [&.disabled]:select-none [&.disabled]:opacity-25">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="h-6 w-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </span>
-                    </button>
-                </div>
-                <section class="flex-grow overflow-y-auto p-4">
-                    <div>
-                        <h2 class="font-montserat text-xl m-6 underline ">Rave's termsand conditions
-                        </h2>
-
-                        <ul>
-                            <h2 class="font-montserat text-lg m-4">Event Details:</h2>
-                            <li class="font-nunito indent-2">
-                                The organizers of Rave reserve the right to keep the
-                                location,
-                                date,
-                                and time undisclosed until a specified period before the event.
-                                Attendees will be informed of the event details through the official
-                                channels provided by the organizers.
-                            </li>
-                            <h2 class="font-montserat text-lg m-4">Ticket Purchase and Admission:
-                            </h2>
-                            <li class="font-nunito">
-                                Tickets are non-transferable and non-refundable.
-                                Attendees must bring a valid government-issued ID and the ticket
-                                confirmation for admission.
-                                The organizers reserve the right to deny entry to any person without
-                                providing a reason.
-                            </li>
-                            <h2 class="font-montserat text-lg m-4">
-                                Code of Conduct:
-                            </h2>
-                            <li class="font-nunito">
-                                Attendees must conduct themselves in a respectful and responsible
-                                manner.
-                                Any form of illegal activity, including drug use, will result in
-                                immediate
-                                expulsion from the event.
-                                The organizers are not responsible for the actions of individual
-                                attendees.
-                            </li>
-                            <h2 class="font-montserat text-lg m-4">Security Measures:</h2>
-                            <li class="font-nunito">
-                                All attendees are subject to search upon entry.
-                                Prohibited items include weapons, illegal substances, and any items
-                                deemed a
-                                security risk by event staff.
-                            </li>
-                            <h2 class="font-montserat text-lg m-4">Health and Safety:</h2>
-                            <li class="font-nunito">
-                                Attendees are responsible for their own well-being.
-                                Medical personnel will be available on-site for emergencies.
-                                It is advisable to stay hydrated and be aware of personal limits
-                                during
-                                the
-                                event.
-                            </li>
-                            <h2 class="font-montserat text-lg m-4">Intellectual Property:</h2>
-                            <li class="font-nunito">
-                                Unauthorized photography, videography, or audio recording is
-                                strictly
-                                prohibited.
-                                Attendees may be captured in official event media, and by
-                                attending,
-                                they
-                                grant the organizers the right to use such media for promotional
-                                purposes.
-                            </li>
-                            <h2 class="font-montserat text-lg m-4">Cancellation or Postponement:
-                            </h2>
-                            <li class="font-nunito">
-                                The organizers reserve the right to cancel, reschedule, or relocate
-                                the
-                                event due to unforeseen circumstances.
-                                In case of cancellation, ticket holders will be provided with
-                                information on
-                                refunds or alternative arrangements.
-                            </li>
-                            <h2 class="font-montserat text-lg m-4">Liability:</h2>
-                            <li class="font-nunito">Attendees participate at their own risk.
-                                The organizers are not liable for any loss, injury, or damage
-                                sustained
-                                during the event.</li>
-                            <h2 class="font-montserat text-lg m-4">Privacy Policy:</h2>
-                            <li class="font-nunito">Personal information collected during ticket
-                                purchase will be used in
-                                accordance with the event's privacy policy.</li>
-                            <h2 class="font-montserat text-lg m-4">Legal Compliance:</h2>
-                            <li class="font-nunito">Attendees must comply with all applicable laws
-                                and regulations.
-                                Any violations may result in immediate removal from the event and
-                                legal
-                                action.
-                                By purchasing a ticket and attending Rave, attendees
-                                acknowledge
-                                that
-                                they have read, understood, and agreed to abide by these terms and
-                                conditions.</li>
-                        </ul>
-                    </div>
-                </section>
-            </div>
-        </div>
     </section>
+
+    <!-- drawer component -->
+    <div id="drawer-example"
+        class="fixed top-0 left-0 bottom-0 rounded-2xl z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-80 dark:bg-gray-800"
+        tabindex="1" aria-labelledby="drawer-label">
+        <h5 id="drawer-label"
+            class="inline-flex items-center font-semibold text-gray-500 dark:text-gray-400 font-montserat text-xl m-6 underline">
+            <svg class="w-4 h-4 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                viewBox="0 0 20 20">
+                <path
+                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+            </svg>Rave's termsand conditions
+        </h5>
+        <button type="button" data-drawer-hide="drawer-example" aria-controls="drawer-example"
+            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white"
+            id="scrollToBottom">
+            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+            </svg>
+            <span class="sr-only">Close menu</span>
+        </button>
+        <div>
+            <ul>
+                <h2 class="font-montserat text-lg m-4">Event Details:</h2>
+                <li class="font-nunito indent-2">
+                    The organizers of Rave reserve the right to keep the
+                    location,
+                    date,
+                    and time undisclosed until a specified period before the event.
+                    Attendees will be informed of the event details through the official
+                    channels provided by the organizers.
+                </li>
+                <h2 class="font-montserat text-lg m-4">Ticket Purchase and Admission:
+                </h2>
+                <li class="font-nunito">
+                    Tickets are non-transferable and non-refundable.
+                    Attendees must bring a valid government-issued ID and the ticket
+                    confirmation for admission.
+                    The organizers reserve the right to deny entry to any person without
+                    providing a reason.
+                </li>
+                <h2 class="font-montserat text-lg m-4">
+                    Code of Conduct:
+                </h2>
+                <li class="font-nunito">
+                    Attendees must conduct themselves in a respectful and responsible
+                    manner.
+                    Any form of illegal activity, including drug use, will result in
+                    immediate
+                    expulsion from the event.
+                    The organizers are not responsible for the actions of individual
+                    attendees.
+                </li>
+                <h2 class="font-montserat text-lg m-4">Security Measures:</h2>
+                <li class="font-nunito">
+                    All attendees are subject to search upon entry.
+                    Prohibited items include weapons, illegal substances, and any items
+                    deemed a
+                    security risk by event staff.
+                </li>
+                <h2 class="font-montserat text-lg m-4">Health and Safety:</h2>
+                <li class="font-nunito">
+                    Attendees are responsible for their own well-being.
+                    Medical personnel will be available on-site for emergencies.
+                    It is advisable to stay hydrated and be aware of personal limits
+                    during
+                    the
+                    event.
+                </li>
+                <h2 class="font-montserat text-lg m-4">Intellectual Property:</h2>
+                <li class="font-nunito">
+                    Unauthorized photography, videography, or audio recording is
+                    strictly
+                    prohibited.
+                    Attendees may be captured in official event media, and by
+                    attending,
+                    they
+                    grant the organizers the right to use such media for promotional
+                    purposes.
+                </li>
+                <h2 class="font-montserat text-lg m-4">Cancellation or Postponement:
+                </h2>
+                <li class="font-nunito">
+                    The organizers reserve the right to cancel, reschedule, or relocate
+                    the
+                    event due to unforeseen circumstances.
+                    In case of cancellation, ticket holders will be provided with
+                    information on
+                    refunds or alternative arrangements.
+                </li>
+                <h2 class="font-montserat text-lg m-4">Liability:</h2>
+                <li class="font-nunito">Attendees participate at their own risk.
+                    The organizers are not liable for any loss, injury, or damage
+                    sustained
+                    during the event.</li>
+                <h2 class="font-montserat text-lg m-4">Privacy Policy:</h2>
+                <li class="font-nunito">Personal information collected during ticket
+                    purchase will be used in
+                    accordance with the event's privacy policy.</li>
+                <h2 class="font-montserat text-lg m-4">Legal Compliance:</h2>
+                <li class="font-nunito">Attendees must comply with all applicable laws
+                    and regulations.
+                    Any violations may result in immediate removal from the event and
+                    legal
+                    action.
+                    By purchasing a ticket and attending Rave, attendees
+                    acknowledge
+                    that
+                    they have read, understood, and agreed to abide by these terms and
+                    conditions.</li>
+            </ul>
+        </div>
+    </div>
 
     <section class="slideOut " id="secondPage">
         <div class="grid grid-cols-3 mx-4 rounded-2xl max-h-screen">
@@ -260,7 +267,8 @@
                 <div class="bg-gray-100 m-4 rounded-2xl">
                     <h1 class="title font-montserat text-xl m-6 ">Welcome, our old brother that has long been lost,
                         please come and rave with us, have some drugs, have some alcohol, have some fun, and don't
-                        forget to bring your friends, we will have a blast, and we will not remember anything, because
+                        forget to bring your friends, we will have a blast, and we will not remember anything,
+                        because
                         we will be too drunk and high to remember anything, but we will have fun, and that's what
                         matters.
                     </h1>
@@ -301,3 +309,98 @@
 </body>
 
 </html>
+<!-- 
+<div>
+    <h2 class="font-montserat text-xl m-6 underline ">Rave's termsand conditions
+    </h2>
+
+    <ul>
+        <h2 class="font-montserat text-lg m-4">Event Details:</h2>
+        <li class="font-nunito indent-2">
+            The organizers of Rave reserve the right to keep the
+            location,
+            date,
+            and time undisclosed until a specified period before the event.
+            Attendees will be informed of the event details through the official
+            channels provided by the organizers.
+        </li>
+        <h2 class="font-montserat text-lg m-4">Ticket Purchase and Admission:
+        </h2>
+        <li class="font-nunito">
+            Tickets are non-transferable and non-refundable.
+            Attendees must bring a valid government-issued ID and the ticket
+            confirmation for admission.
+            The organizers reserve the right to deny entry to any person without
+            providing a reason.
+        </li>
+        <h2 class="font-montserat text-lg m-4">
+            Code of Conduct:
+        </h2>
+        <li class="font-nunito">
+            Attendees must conduct themselves in a respectful and responsible
+            manner.
+            Any form of illegal activity, including drug use, will result in
+            immediate
+            expulsion from the event.
+            The organizers are not responsible for the actions of individual
+            attendees.
+        </li>
+        <h2 class="font-montserat text-lg m-4">Security Measures:</h2>
+        <li class="font-nunito">
+            All attendees are subject to search upon entry.
+            Prohibited items include weapons, illegal substances, and any items
+            deemed a
+            security risk by event staff.
+        </li>
+        <h2 class="font-montserat text-lg m-4">Health and Safety:</h2>
+        <li class="font-nunito">
+            Attendees are responsible for their own well-being.
+            Medical personnel will be available on-site for emergencies.
+            It is advisable to stay hydrated and be aware of personal limits
+            during
+            the
+            event.
+        </li>
+        <h2 class="font-montserat text-lg m-4">Intellectual Property:</h2>
+        <li class="font-nunito">
+            Unauthorized photography, videography, or audio recording is
+            strictly
+            prohibited.
+            Attendees may be captured in official event media, and by
+            attending,
+            they
+            grant the organizers the right to use such media for promotional
+            purposes.
+        </li>
+        <h2 class="font-montserat text-lg m-4">Cancellation or Postponement:
+        </h2>
+        <li class="font-nunito">
+            The organizers reserve the right to cancel, reschedule, or relocate
+            the
+            event due to unforeseen circumstances.
+            In case of cancellation, ticket holders will be provided with
+            information on
+            refunds or alternative arrangements.
+        </li>
+        <h2 class="font-montserat text-lg m-4">Liability:</h2>
+        <li class="font-nunito">Attendees participate at their own risk.
+            The organizers are not liable for any loss, injury, or damage
+            sustained
+            during the event.</li>
+        <h2 class="font-montserat text-lg m-4">Privacy Policy:</h2>
+        <li class="font-nunito">Personal information collected during ticket
+            purchase will be used in
+            accordance with the event's privacy policy.</li>
+        <h2 class="font-montserat text-lg m-4">Legal Compliance:</h2>
+        <li class="font-nunito">Attendees must comply with all applicable laws
+            and regulations.
+            Any violations may result in immediate removal from the event and
+            legal
+            action.
+            By purchasing a ticket and attending Rave, attendees
+            acknowledge
+            that
+            they have read, understood, and agreed to abide by these terms and
+            conditions.</li>
+    </ul>
+</div> -->
